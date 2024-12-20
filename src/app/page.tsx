@@ -1,10 +1,13 @@
 import Image from "next/image";
 import { Badge } from "./components/badge";
 import { Gallery } from "./components/gallery";
+import { FifthContent } from "@/page-components/fifth-content";
+import { SixthContent } from "@/page-components/sixth-content";
+import { SeventContent } from "@/page-components/seventh-content";
 
 export default function HomePage() {
   return (
-    <div className="font-[family-name:var(--font-geist-sans)] px-[10vw] pt-[10vh] grid grid-cols-1 z-0 relative mb-[5vh]">
+    <div className="font-[family-name:var(--font-geist-sans)] px-[10vw] pt-[10vh] grid grid-cols-1 z-0 relative mb-[5vh] ">
       <svg
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
@@ -54,11 +57,11 @@ export default function HomePage() {
             transform="translate(100 100)"
           />
         </svg>
-        <div className="flex relative z-10">
+        <div className="flex relative z-10 mt-[-10vh]">
           <div className="w-3/5">
             <div className="h-[7px] w-1/5 bg-red-600 mb-4" />
             <h1 className="text-7xl font-bold">CORNERSTONE</h1>
-            <p className="text-2xl">
+            <p className="text-2xl mt-4">
               Lorem ipsum odor amet, consectetuer adipiscing elit. Mi facilisis
               orci porttitor amet cras ornare. Fames felis netus venenatis,
               hendrerit mauris fermentum justo ante. Nostra ut porta neque
@@ -77,7 +80,7 @@ export default function HomePage() {
         <div className="relative z-10 mt-[10vh] flex">
           <div className="w-1/2">
             <h1 className="text-7xl font-bold">CLUTTER FREE WORKSPACE</h1>
-            <h2 className="text-2xl">
+            <h2 className="text-2xl mt-4">
               Lorem ipsum odor amet, consectetuer adipiscing elit. Facilisi
               facilisis ornare tortor nullam at bibendum aliquet quisque.
               Pellentesque cursus lobortis bibendum bibendum egestas iaculis
@@ -96,6 +99,22 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+      <div className="relative">
+        <svg
+          viewBox="0 0 200 200"
+          xmlns="http://www.w3.org/2000/svg"
+          className="absolute top-[-90vh] z-0 opacity-50"
+        >
+          <path
+            fill="#CCCCCC"
+            d="M64.8,-20C70.8,-2.6,53.4,23.4,29.2,41.2C5,59,-25.9,68.6,-45.3,56C-64.7,43.4,-72.5,8.7,-63.1,-13.5C-53.6,-35.6,-26.8,-45.1,1.3,-45.5C29.4,-45.9,58.9,-37.3,64.8,-20Z"
+            transform="translate(100 100)"
+          />
+        </svg>
+        <FifthContent className="relative z-10 mt-[10vh] flex" />
+      </div>
+      <SixthContent className="mt-[10vh] flex relative z-10" />
+      <SeventContent className="relative mt-[10vh] h-[60vh] w-full overflow-hidden" />
     </div>
   );
 }
